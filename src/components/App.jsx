@@ -1,4 +1,11 @@
+import { Auth } from 'pages/Auth/Auth';
+import { Main } from 'pages/Main/Main';
+import { useContext } from 'react';
+import { AuthContext } from './AuthContext/AuthContext';
+
 export const App = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div
       style={{
@@ -7,10 +14,10 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      React homework template
+      {user ? <Main /> : <Auth />}
     </div>
   );
 };
