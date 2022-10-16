@@ -1,4 +1,5 @@
 import { AuthContext } from 'components/AuthContext/AuthContext';
+import { Gallery } from 'components/Gallery/Gallery';
 import { useContext } from 'react';
 
 export const Main = () => {
@@ -8,6 +9,7 @@ export const Main = () => {
       <button type="button" onClick={() => setUser(null)}>
         LogOut
       </button>
+      <Gallery />
     </div>
   );
 };
